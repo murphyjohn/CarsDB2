@@ -97,7 +97,7 @@
             // lblOperator
             // 
             this.lblOperator.AutoSize = true;
-            this.lblOperator.Location = new System.Drawing.Point(244, 40);
+            this.lblOperator.Location = new System.Drawing.Point(227, 40);
             this.lblOperator.Name = "lblOperator";
             this.lblOperator.Size = new System.Drawing.Size(65, 17);
             this.lblOperator.TabIndex = 1;
@@ -106,7 +106,7 @@
             // lblValue
             // 
             this.lblValue.AutoSize = true;
-            this.lblValue.Location = new System.Drawing.Point(449, 40);
+            this.lblValue.Location = new System.Drawing.Point(407, 40);
             this.lblValue.Name = "lblValue";
             this.lblValue.Size = new System.Drawing.Size(44, 17);
             this.lblValue.TabIndex = 2;
@@ -123,16 +123,16 @@
             // cboOperator
             // 
             this.cboOperator.FormattingEnabled = true;
-            this.cboOperator.Location = new System.Drawing.Point(247, 78);
+            this.cboOperator.Location = new System.Drawing.Point(230, 78);
             this.cboOperator.Name = "cboOperator";
-            this.cboOperator.Size = new System.Drawing.Size(121, 24);
+            this.cboOperator.Size = new System.Drawing.Size(92, 24);
             this.cboOperator.TabIndex = 4;
             // 
             // txtValue
             // 
-            this.txtValue.Location = new System.Drawing.Point(452, 79);
+            this.txtValue.Location = new System.Drawing.Point(410, 79);
             this.txtValue.Name = "txtValue";
-            this.txtValue.Size = new System.Drawing.Size(159, 22);
+            this.txtValue.Size = new System.Drawing.Size(174, 22);
             this.txtValue.TabIndex = 5;
             // 
             // frmSearch

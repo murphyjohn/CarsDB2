@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblVehicleRegNo = new System.Windows.Forms.Label();
             this.lblMake = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.btnLast = new System.Windows.Forms.Button();
             this.txtRecordCount = new System.Windows.Forms.TextBox();
+            this.tTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // lblTitle
@@ -145,6 +147,7 @@
             this.txtDateRegistered.Name = "txtDateRegistered";
             this.txtDateRegistered.Size = new System.Drawing.Size(100, 22);
             this.txtDateRegistered.TabIndex = 10;
+            this.tTip.SetToolTip(this.txtDateRegistered, "Enter the date in the format DD-MM-YYYY.");
             // 
             // txtRentalPerDay
             // 
@@ -161,6 +164,7 @@
             this.chkAvailable.Name = "chkAvailable";
             this.chkAvailable.Size = new System.Drawing.Size(18, 17);
             this.chkAvailable.TabIndex = 12;
+            this.tTip.SetToolTip(this.chkAvailable, "Tick this box if the Vehicle is currently available for hire.");
             this.chkAvailable.UseVisualStyleBackColor = true;
             // 
             // btnUpdate
@@ -190,6 +194,7 @@
             this.btnSearch.Size = new System.Drawing.Size(118, 56);
             this.btnSearch.TabIndex = 16;
             this.btnSearch.Text = "&Search";
+            this.tTip.SetToolTip(this.btnSearch, "Click here to bring up the Search window.");
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -335,6 +340,7 @@
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnLast;
         private System.Windows.Forms.TextBox txtRecordCount;
+        private System.Windows.Forms.ToolTip tTip;
     }
 }
 
