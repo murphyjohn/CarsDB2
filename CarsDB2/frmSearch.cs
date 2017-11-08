@@ -27,5 +27,12 @@ namespace CarsDB2
         {
             Close();
         }
+
+        private void frmSearch_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hireDataSet.tblCar' table. You can move, or remove it, as needed.
+            this.tblCarTableAdapter.Fill(this.hireDataSet.tblCar);
+
+        }
     }
 }
