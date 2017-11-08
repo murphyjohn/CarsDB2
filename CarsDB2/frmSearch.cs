@@ -15,6 +15,17 @@ namespace CarsDB2
         public frmSearch()
         {
             InitializeComponent();
+            this.Text = "Task A Search - John Murphy - " + DateTime.Now.ToShortDateString();
+        }
+
+        private void btnRun_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
