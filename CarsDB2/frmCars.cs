@@ -106,6 +106,10 @@ namespace CarsDB2
                     command.CommandText = "UPDATE tblCar SET VehicleRegNo = @VehicleRegNo, Make = @Make, EngineSize = @EngineSize," +
                         "DateRegistered=@DateRegistered,RentalPerDay=@RentalPerDay,Available=@Available " +
                         "WHERE VehicleRegNo = @OldVehicleRegNo";
+
+                    command.Parameters.AddWithValue("@OldVehicleRegNo", SqlDbType.NVarChar).Value =
+                        Convert.ToString(dataSet.Tables[0].Rows[currentRow]["VehicleRegNo"]);
+
                     command.Parameters.AddWithValue("@VehicleRegNo", SqlDbType.NVarChar).Value = txtVehicleRegNo.Text.Trim();
                     command.Parameters.AddWithValue("@Make", SqlDbType.NVarChar).Value = txtMake.Text.Trim();
                     command.Parameters.AddWithValue("@EngineSize", SqlDbType.NVarChar).Value = txtEngineSize.Text.Trim();
@@ -113,8 +117,7 @@ namespace CarsDB2
                     command.Parameters.AddWithValue("@RentalPerDay", SqlDbType.SmallMoney).Value = txtRentalPerDay.Text.Trim();
                     command.Parameters.AddWithValue("@Available", SqlDbType.Bit).Value = chkAvailable.Checked;
 
-                    command.Parameters.AddWithValue("@OldVehicleRegNo", SqlDbType.NVarChar).Value = 
-                        Convert.ToString(dataSet.Tables[0].Rows[currentRow]["VehicleRegNo"]);
+                    
 
                     sqlConnect.Open();
                     command.ExecuteNonQuery();
@@ -183,6 +186,7 @@ namespace CarsDB2
                         sqlConnect.Close();
                     }
                     dataSet.Reset();
+                    currentRow = 0;
                     frmCars_Load(null, null);
                 }
                 catch (SqlException ex)
