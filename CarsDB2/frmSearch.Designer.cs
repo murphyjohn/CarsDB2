@@ -30,28 +30,28 @@
         {
             this.components = new System.ComponentModel.Container();
             this.grpSearch = new System.Windows.Forms.GroupBox();
-            this.dgvSearchResults = new System.Windows.Forms.DataGridView();
-            this.btnRun = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.lblField = new System.Windows.Forms.Label();
-            this.lblOperator = new System.Windows.Forms.Label();
-            this.lblValue = new System.Windows.Forms.Label();
-            this.cboField = new System.Windows.Forms.ComboBox();
-            this.cboOperator = new System.Windows.Forms.ComboBox();
             this.txtValue = new System.Windows.Forms.TextBox();
-            this.hireDataSet = new CarsDB2.HireDataSet();
-            this.tblCarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblCarTableAdapter = new CarsDB2.HireDataSetTableAdapters.tblCarTableAdapter();
+            this.cboOperator = new System.Windows.Forms.ComboBox();
+            this.cboField = new System.Windows.Forms.ComboBox();
+            this.lblValue = new System.Windows.Forms.Label();
+            this.lblOperator = new System.Windows.Forms.Label();
+            this.lblField = new System.Windows.Forms.Label();
+            this.dgvSearchResults = new System.Windows.Forms.DataGridView();
             this.vehicleRegNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.makeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.engineSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateRegisteredDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rentalPerDayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.availableDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tblCarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hireDataSet = new CarsDB2.HireDataSet();
+            this.btnRun = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.tblCarTableAdapter = new CarsDB2.HireDataSetTableAdapters.tblCarTableAdapter();
             this.grpSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearchResults)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hireDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hireDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // grpSearch
@@ -67,6 +67,56 @@
             this.grpSearch.Size = new System.Drawing.Size(627, 146);
             this.grpSearch.TabIndex = 0;
             this.grpSearch.TabStop = false;
+            // 
+            // txtValue
+            // 
+            this.txtValue.Location = new System.Drawing.Point(410, 79);
+            this.txtValue.Name = "txtValue";
+            this.txtValue.Size = new System.Drawing.Size(174, 22);
+            this.txtValue.TabIndex = 5;
+            // 
+            // cboOperator
+            // 
+            this.cboOperator.FormattingEnabled = true;
+            this.cboOperator.Location = new System.Drawing.Point(230, 78);
+            this.cboOperator.Name = "cboOperator";
+            this.cboOperator.Size = new System.Drawing.Size(92, 24);
+            this.cboOperator.TabIndex = 4;
+            // 
+            // cboField
+            // 
+            this.cboField.FormattingEnabled = true;
+            this.cboField.Location = new System.Drawing.Point(27, 78);
+            this.cboField.Name = "cboField";
+            this.cboField.Size = new System.Drawing.Size(121, 24);
+            this.cboField.TabIndex = 3;
+            // 
+            // lblValue
+            // 
+            this.lblValue.AutoSize = true;
+            this.lblValue.Location = new System.Drawing.Point(407, 40);
+            this.lblValue.Name = "lblValue";
+            this.lblValue.Size = new System.Drawing.Size(44, 17);
+            this.lblValue.TabIndex = 2;
+            this.lblValue.Text = "Value";
+            // 
+            // lblOperator
+            // 
+            this.lblOperator.AutoSize = true;
+            this.lblOperator.Location = new System.Drawing.Point(227, 40);
+            this.lblOperator.Name = "lblOperator";
+            this.lblOperator.Size = new System.Drawing.Size(65, 17);
+            this.lblOperator.TabIndex = 1;
+            this.lblOperator.Text = "Operator";
+            // 
+            // lblField
+            // 
+            this.lblField.AutoSize = true;
+            this.lblField.Location = new System.Drawing.Point(24, 40);
+            this.lblField.Name = "lblField";
+            this.lblField.Size = new System.Drawing.Size(38, 17);
+            this.lblField.TabIndex = 0;
+            this.lblField.Text = "Field";
             // 
             // dgvSearchResults
             // 
@@ -85,96 +135,6 @@
             this.dgvSearchResults.RowTemplate.Height = 24;
             this.dgvSearchResults.Size = new System.Drawing.Size(894, 285);
             this.dgvSearchResults.TabIndex = 1;
-            // 
-            // btnRun
-            // 
-            this.btnRun.Location = new System.Drawing.Point(685, 27);
-            this.btnRun.Name = "btnRun";
-            this.btnRun.Size = new System.Drawing.Size(128, 65);
-            this.btnRun.TabIndex = 2;
-            this.btnRun.Text = "Run";
-            this.btnRun.UseVisualStyleBackColor = true;
-            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Location = new System.Drawing.Point(685, 108);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(128, 65);
-            this.btnClose.TabIndex = 3;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // lblField
-            // 
-            this.lblField.AutoSize = true;
-            this.lblField.Location = new System.Drawing.Point(24, 40);
-            this.lblField.Name = "lblField";
-            this.lblField.Size = new System.Drawing.Size(38, 17);
-            this.lblField.TabIndex = 0;
-            this.lblField.Text = "Field";
-            // 
-            // lblOperator
-            // 
-            this.lblOperator.AutoSize = true;
-            this.lblOperator.Location = new System.Drawing.Point(227, 40);
-            this.lblOperator.Name = "lblOperator";
-            this.lblOperator.Size = new System.Drawing.Size(65, 17);
-            this.lblOperator.TabIndex = 1;
-            this.lblOperator.Text = "Operator";
-            // 
-            // lblValue
-            // 
-            this.lblValue.AutoSize = true;
-            this.lblValue.Location = new System.Drawing.Point(407, 40);
-            this.lblValue.Name = "lblValue";
-            this.lblValue.Size = new System.Drawing.Size(44, 17);
-            this.lblValue.TabIndex = 2;
-            this.lblValue.Text = "Value";
-            // 
-            // cboField
-            // 
-            this.cboField.FormattingEnabled = true;
-            this.cboField.Location = new System.Drawing.Point(27, 78);
-            this.cboField.Name = "cboField";
-            this.cboField.Size = new System.Drawing.Size(121, 24);
-            this.cboField.TabIndex = 3;
-            // 
-            // cboOperator
-            // 
-            this.cboOperator.FormattingEnabled = true;
-            this.cboOperator.Items.AddRange(new object[] {
-            "=",
-            "<",
-            ">",
-            "<=",
-            ">="});
-            this.cboOperator.Location = new System.Drawing.Point(230, 78);
-            this.cboOperator.Name = "cboOperator";
-            this.cboOperator.Size = new System.Drawing.Size(92, 24);
-            this.cboOperator.TabIndex = 4;
-            // 
-            // txtValue
-            // 
-            this.txtValue.Location = new System.Drawing.Point(410, 79);
-            this.txtValue.Name = "txtValue";
-            this.txtValue.Size = new System.Drawing.Size(174, 22);
-            this.txtValue.TabIndex = 5;
-            // 
-            // hireDataSet
-            // 
-            this.hireDataSet.DataSetName = "HireDataSet";
-            this.hireDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblCarBindingSource
-            // 
-            this.tblCarBindingSource.DataMember = "tblCar";
-            this.tblCarBindingSource.DataSource = this.hireDataSet;
-            // 
-            // tblCarTableAdapter
-            // 
-            this.tblCarTableAdapter.ClearBeforeFill = true;
             // 
             // vehicleRegNoDataGridViewTextBoxColumn
             // 
@@ -212,6 +172,40 @@
             this.availableDataGridViewCheckBoxColumn.HeaderText = "Available";
             this.availableDataGridViewCheckBoxColumn.Name = "availableDataGridViewCheckBoxColumn";
             // 
+            // tblCarBindingSource
+            // 
+            this.tblCarBindingSource.DataMember = "tblCar";
+            this.tblCarBindingSource.DataSource = this.hireDataSet;
+            // 
+            // hireDataSet
+            // 
+            this.hireDataSet.DataSetName = "HireDataSet";
+            this.hireDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnRun
+            // 
+            this.btnRun.Location = new System.Drawing.Point(685, 27);
+            this.btnRun.Name = "btnRun";
+            this.btnRun.Size = new System.Drawing.Size(128, 65);
+            this.btnRun.TabIndex = 2;
+            this.btnRun.Text = "Run";
+            this.btnRun.UseVisualStyleBackColor = true;
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(685, 108);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(128, 65);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // tblCarTableAdapter
+            // 
+            this.tblCarTableAdapter.ClearBeforeFill = true;
+            // 
             // frmSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -227,8 +221,8 @@
             this.grpSearch.ResumeLayout(false);
             this.grpSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearchResults)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hireDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hireDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
